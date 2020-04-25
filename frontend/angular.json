@@ -123,5 +123,8 @@
       }
     }
   },
-  "defaultProject": "TheHotel"
+  "defaultProject": "TheHotel",
+  "cli": {
+    "analytics": false
+  }
 }

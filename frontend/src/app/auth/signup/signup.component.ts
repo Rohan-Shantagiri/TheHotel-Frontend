@@ -23,17 +23,21 @@ export class SignupComponent implements OnInit {
     Email: ''
   };
 
-  constructor(private auth: AuthService,private router : Router) { }
+  constructor(private auth: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
 
-  onRegisterClick(){
+  onRegisterClick() {
     this.auth.registration(this.users)
       .subscribe(
-        result =>{
-          sessionStorage.setItem('authtoken',result.token);
-          this.router.navigateByUrl('/home')
+        result => {
+          if (result.auth) {
+            sessionStorage.setItem('authtoken', result.token);
+            this.router.navigateByUrl('/home');
+          } else {
+            alert(result.status);
+          }
         },
         error => {
           console.log(error);

@@ -15,20 +15,24 @@ import { AuthService } from 'src/app/auth.service';
 export class SigninComponent implements OnInit {
 
   public users = {
-    Email:'',
+    Email: '',
     Password: ''
   };
 
-  constructor(private router : Router,private auth: AuthService) { }
+  constructor(private router: Router, private auth: AuthService) { }
 
   ngOnInit(): void {
   }
-  onLoginClick(){
+  onLoginClick() {
     this.auth.login(this.users)
       .subscribe(
-        result=>{
-          sessionStorage.setItem('authtoken',result.token);
-          this.router.navigateByUrl('/home');
+        (result) => {
+          if (result['auth']) {
+            sessionStorage.setItem('authtoken', result.token);
+            this.router.navigateByUrl('/home');
+          } else {
+            alert("Invalid Email/Password");
+          }
         },
       )
   }
