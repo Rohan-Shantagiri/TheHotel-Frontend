@@ -1,0 +1,71 @@
+<h1 mat-dialog-title>Enter Your Details</h1>
+<mat-dialog-content>
+    <form>
+        <div class="form-group">
+            <label for="FullName">Full Name</label>
+            <input [(ngModel)]="details.FullName" required  #FullName="ngModel" type="text" class="form-control" name="Email"
+             id="FullName" pattern="[a-z,A-z]" style="border-radius: 10px;margin-left: 20px;">
+             <div class="alert alert-danger" *ngIf="FullName.touched && FullName.errors">
+                <div *ngIf="FullName.errors.required"><strong>Name Required</strong></div>
+                <div *ngIf="FullName.errors.minlength">Minimun length Should be 3</div>
+                <div *ngIf="FullName.errors.pattern"> Name can only have alphabets</div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label for="Email">Email</label>
+            <input [(ngModel)]="details.Email" required  #Email="ngModel" type="text" class="form-control" name="Email"
+             id="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" style="border-radius: 10px;margin-left: 20px;">
+             <div class="alert alert-danger" *ngIf="Email.touched && Email.errors">
+                <div *ngIf="Email.errors.required"><strong>Email id Required</strong></div>
+                <div *ngIf="Email.errors.pattern"> Inavlid Email id</div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label class="label control-label">No of Guests:</label>
+            <select [(ngModel)]="details.noofguests" required #noofguests="ngModel" name="noofguests" id="noofguests"  class="custom-select"  
+            style="border-radius: 10px;margin-left: 20px;">
+                <option NgSelectOption value="1">1</option>
+                <option NgSelectOption value="2">2</option>
+                <option NgSelectOption value="3">3</option>
+                <option NgSelectOption value="4">4</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="noofguests.touched && noofguests.errors">
+                <div *ngIf="noofguests.errors.required"><strong>No of Gurests Required</strong></div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label class="label control-label">Type of Room:</label>
+            <select [(ngModel)]="details.roomtype" required #roomtype="ngModel" name="roomtype" id="roomtype"  class="custom-select"  
+            style="border-radius: 10px;margin-left: 20px;">
+                <option NgSelectOption value="King">King</option>
+                <option NgSelectOption value="Suite">Suite</option>
+                <option NgSelectOption value="Twin">Twin</option>
+                <option NgSelectOption value="Carana">Carana</option>
+                <option NgSelectOption value="Single">Single</option>
+                <option NgSelectOption value="Double">Double</option>
+            </select>
+            <div class="alert alert-danger" *ngIf="roomtype.touched && roomtype.errors">
+                <div *ngIf="roomtype.errors.required"><strong>Room Type Required</strong></div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label for="Address">Address</label>
+            <input [(ngModel)]="details.Address" required  #Address="ngModel" type="text" class="form-control" name="Email"
+             id="FullName" pattern="[a-z,A-z,0-9]" style="border-radius: 10px;margin-left: 20px;">
+             <div class="alert alert-danger" *ngIf="roomtype.touched && roomtype.errors">
+                <div *ngIf="roomtype.errors.required"><strong>Room Type Required</strong></div>
+             </div>
+        </div>
+        <div class="form-group">
+            <label class="label control-label"> Date of Booking </label> 
+            <input [(ngModel)]="details.dob" required #dob="ngModel" type="date" name="start" style="border-radius: 10px;margin-left: 20px;">
+            <div class="alert alert-danger" *ngIf="dob.touched && dob.errors">
+                <div *ngIf="dob.errors.required"><strong>Date of Booking Required</strong></div>
+             </div>
+        </div>
+    </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button mat-dialog-close (click)="onClick()" > Book</button>
+    <button mat-button mat-dialog-close> Cancel</button>
+</mat-dialog-actions>

@@ -1,0 +1,25 @@
+.container {
+    top: 0;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    height: 700px;
+    display: block;
+    background: url(/assets/images/home_beach.jpg)center center no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+ 
+  .card{
+    margin-bottom: 30px;
+  }
+
+  .login-button {
+    margin-top: 20px;
+    display: block;
+    width: 80%;
+    margin: 20px auto;
+  }
+  
+  

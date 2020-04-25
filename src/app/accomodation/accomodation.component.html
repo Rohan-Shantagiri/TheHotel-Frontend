@@ -1,0 +1,69 @@
+<div class="container">
+    <section class="home-section">=
+        <div class="home-section-header">
+            <div fxLayout="column" fxLayoutAlign="center center">
+                <div>
+                    <h1 class="mat-subheading-2 dark-secondary-text">All Types of Rooms Available</h1>
+                </div>
+            </div>
+        </div>
+        <div class="rooms-home-display" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+            <mat-card class="rooms-suites" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>King</h2>
+              </mat-card-header>  
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary"(click)="onClick()">Book Now</button>
+              </mat-card-actions>   
+            </mat-card>
+            <mat-card class="beach-houses" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>Suite</h2>
+              </mat-card-header> 
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary" (click)="onClick()">Book Now</button>
+              </mat-card-actions>
+            </mat-card>      
+          </div>
+    </section>
+    <section class="home-section">
+        <div class="rooms-home-display" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+            <mat-card class="Indian" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>Cabana</h2>
+              </mat-card-header> 
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary"(click)="onClick()">Book Now</button>
+              </mat-card-actions>  
+            </mat-card>
+            <mat-card class="Chinese" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>Twin</h2>
+              </mat-card-header> 
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary" (click)="onClick()">Book Now</button>
+              </mat-card-actions>
+            </mat-card>      
+          </div>
+    </section>
+    <section class="home-section">
+        <div class="rooms-home-display" fxLayout.xs="column" fxLayoutWrap fxLayoutAlign="center">
+            <mat-card class="single" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>Single</h2>
+              </mat-card-header> 
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary" (click)="onClick()">Book Now</button>
+              </mat-card-actions>  
+            </mat-card>
+            <mat-card class="double" fxFlex="45%;" fxFlex.sm="100%">
+              <mat-card-header fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <h2>Double</h2>
+              </mat-card-header> 
+              <mat-card-actions fxLayout="column" fxLayout="row" fxLayoutAlign="center center">
+                <button mat-raised-button color="primary" (click)="onClick()">Book Now</button>
+              </mat-card-actions>
+            </mat-card>      
+          </div>
+    </section>
+</div>

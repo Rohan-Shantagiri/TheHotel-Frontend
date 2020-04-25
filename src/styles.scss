@@ -1,0 +1,94 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$TheHotel-primary: (
+    50 : #f6fbfb,
+    100 : #e8f5f4,
+    200 : #d9efed,
+    300 : #c9e9e6,
+    400 : #bee4e0,
+    500 : #b2dfdb,
+    600 : #abdbd7,
+    700 : #a2d7d2,
+    800 : #99d2cd,
+    900 : #8acac4,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #f6fffe,
+    A700 : #dcfffc,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+$TheHotel-accent: (
+    50 : #fcf7e7,
+    100 : #f8ecc3,
+    200 : #f4df9b,
+    300 : #efd273,
+    400 : #ebc955,
+    500 : #e8bf37,
+    600 : #e5b931,
+    700 : #e2b12a,
+    800 : #dea923,
+    900 : #d89b16,
+    A100 : #ffffff,
+    A200 : #fff1d6,
+    A400 : #ffe0a3,
+    A700 : #ffd78a,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+  )
+);
+
+
+$TheHotel-primary: mat-palette($TheHotel-primary,900);
+$TheHotel-accent:  mat-palette($TheHotel-accent, 500);
+
+$TheHotel-warn:    mat-palette($mat-red);
+
+
+$TheHotel: mat-light-theme($TheHotel-primary, $TheHotel-accent, $TheHotel-warn);
+
+
+@import './app/navigation/nav-tabs/nav-tabs.component-theme.scss';
+
+@include angular-material-theme($TheHotel);
+@include navtabs-component-theme($TheHotel);
+
+
+
+.mat-list-option:hover,
+.mat-list-option.matlist-item-focus,
+.mat-nav-list .mat-list-item:hover,
+.mat-nav-list .mat-list-item.mat-list-item-focus {
+    background-color: mat-color($TheHotel-primary,300);
+    color: mat-color($TheHotel-primary,900);
+}

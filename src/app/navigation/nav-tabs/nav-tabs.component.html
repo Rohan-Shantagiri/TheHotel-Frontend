@@ -1,0 +1,22 @@
+<div class="navtabs-container">
+    <nav mat-tab-nav-bar fxFlex fxLayout fxLayoutAlign="center center">
+        <a mat-tab-link routerLink="/"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        Home
+        </a>
+
+        <a mat-tab-link routerLink="/accomodation"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        Rooms
+        </a>
+
+        <a mat-tab-link routerLink="/food-beverage"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+        Food 
+        </a>
+
+    </nav>
+</div>
