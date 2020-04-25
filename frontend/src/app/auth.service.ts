@@ -12,27 +12,27 @@ export class AuthService {
   private _bookingurl = "http://localhost:3000/auth/book";
 
 
-  constructor(private _http : HttpClient) { }
+  constructor(private _http: HttpClient) { }
 
-  booking(details){
-    return(this._http.post<any>(this._bookingurl,details))
+  booking(details) {
+    return (this._http.post<any>(this._bookingurl, details))
   }
 
-  registration(users){
-    return(this._http.post<any>(this._registrationurl,users))
+  registration(users) {
+    return (this._http.post<any>(this._registrationurl, users))
   }
 
-  login(users){
-    return(this._http.post<any>(this._loginurl,users));
+  login(users) {
+    return (this._http.post<any>(this._loginurl, users));
   }
 
-  isLoggedIn(){
+  isLoggedIn() {
     return !!sessionStorage.getItem('authtoken')
   }
-  getToken(){
-    
-    console.log("Get token : "+sessionStorage.getItem('authtoken'));
+  getToken() {
+
+    console.log("Get token : " + sessionStorage.getItem('authtoken'));
     return sessionStorage.getItem('authtoken');
-     
+
   }
 }
