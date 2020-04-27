@@ -1,14 +1,16 @@
 const MongoClient = require("mongodb").MongoClient
-const url = "mongodb://localhost:27017";
+// const url = "mongodb://localhost:27017";
+let url = 'mongodb://venkateshm:venkatesh123@ds129374.mlab.com:29374/customersapp';
 var dbo;
 var db;
 
-MongoClient.connect(url,(error,result)=>{
+MongoClient.connect(url,{useNewUrlParser: true, useUnifiedTopology: true},(error,result)=>{
     if(error)
         throw error;
     dbo = result;
-    db = dbo.db('TheHotel');
-    console.log("Established connection to mongodb database Registration");
+    db = result.db('customersapp');
+    // db = dbo.db('TheHotel');
+    console.log("Established connection to mongodb database Registration",db);
     // let user = 'praveen@gmail.com'
     // fetchRegistration(user);
 })
