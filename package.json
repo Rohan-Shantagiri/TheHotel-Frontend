@@ -1,0 +1,19 @@
+{
+  "name": "thehotel-frontend",
+  "version": "1.0.0",
+  "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.5.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rohan-Shantagiri/TheHotel-Frontend.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rohan-Shantagiri/TheHotel-Frontend/issues"
+  },
+  "homepage": "https://github.com/Rohan-Shantagiri/TheHotel-Frontend#readme"
+}
